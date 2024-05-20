@@ -1,0 +1,2229 @@
+@font-face { font-family: Gagalin; src: url('Gagalin-Regular.otf'); }
+@font-face { font-family: Gagalin; font-weight: bold; src: url('Gagalin-Regular.otf');}
+@font-face { font-family: Anton; src: url('Anton-Regular.ttf'); }
+@font-face { font-family: Anton; font-weight: bold; src: url('Anton-Regular.ttf');}
+@font-face { font-family: Gellatio; src: url('Gellatio Regular.ttf'); }
+@font-face { font-family: Gellatio; font-weight: bold; src: url('Gellatio Regular.ttf');}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #feb5a6;
+    color: #7d6565;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 9999;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.scroll-to-top:hover {
+    background-color: #7d6565;
+    box-shadow: 0px 0px 15px 5px;
+    color: #fcefba;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.headerbox{
+    position: fixed;
+    background-color: #7d6565;
+    height: 30px;
+	width: 100%;
+    animation-name: head;
+    animation-duration: 1s;
+}
+
+.header img{
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-right: 3%;
+    margin-top: 1%;
+    height: 30px;
+    width: 30px;
+    padding: 5px 5px;
+    background-color:#bba9a9;
+    border-radius: 30px;
+    animation-name: headd;
+    animation-duration: 1s;
+    z-index: 9999;
+    transition: 0.5s;
+}
+
+.headerbox1{
+    position: fixed;
+    border-radius: 30px;
+    background-color: #7d6565;
+    height: 70px;
+	width: 100%;
+    animation-name: head;
+    animation-duration: 1s;
+    z-index: 900;
+}
+
+.headerbox1 img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 0.3%;
+    margin-left: 5%;
+    height: 50px;
+    width: 50px;
+}
+
+.headerbox1 h1{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0.8%;
+    margin-left: 13%;
+    font-family: 'Gagalin', sans-serif;
+    font-size: 50px;
+    color: #ffeef8;
+    transition: 0.5s;
+}
+
+.headerboxmenu{
+    position: fixed;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    top: 0;
+    right: 0;
+    margin-right: 10%;
+    margin-top: 0.5%;
+    background-color: #7d6565;
+    border-radius: 50px;
+    height: 50px;
+	width: 40%;
+    z-index: 905;
+    animation-name: head;
+    animation-duration: 1s;
+}
+
+.headerboxmenu a{
+    padding: 2px 12px;
+    border-radius: 100px;
+    font-family: 'Anton', sans-serif;
+    color: #7d6565;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 20px;
+    transition: background-color 0.3s, color 0.3s;
+    transition: 0.5s;
+}
+
+.active{
+    background-color: #fcefba;
+    color: #7d6565;
+    cursor: default;
+}
+
+.dec{
+    background-color: #feb5a6;
+}
+
+.dec:hover{
+    background-color:#ffeef8;
+    color: #7d6565;
+    transition: 0.3s;
+    transform: scale(1.2);
+}
+
+.hovernav {
+    z-index: 5;
+    display: inline-block;
+    background-color: #feb5a6;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 2px 12px;
+    border-radius: 100px;
+    font-family: 'Anton', sans-serif;
+    color: #7d6565;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+.popup {
+    display: none;
+    position: absolute;
+    padding: 15px 15px;
+    background-color: #7d6565;
+    border-radius: 10px;
+    top: 40px;
+    margin-left: -50px;
+    z-index: 3;
+}
+
+.hovernav:hover .popup {
+    z-index: 5;
+    transition: 0.5s;
+    display: block;
+}
+
+.hovernav:hover {
+    background-color:#ffeef8;
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+
+.popup a {
+    left: 0;
+    display: block;
+    color: #7d6565;
+    text-decoration: none;
+}
+
+.popup a:hover {
+    background-color: #ffeef8;
+}
+
+.art{
+    font-size: 20px;
+    font-family: 'Anton', sans-serif;
+    display: block;
+    width: 110px;
+    margin-bottom: 10%;
+    background-color: #feb5a6; /* Change this to red */
+    color: #7d6565; /* Text color for buttons */
+    border: none;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.game{
+    font-size: 20px;
+    font-family: 'Anton', sans-serif;
+    display: block;
+    left: 0;
+    margin-top: 10%;
+    background-color: #feb5a6; /* Change this to red */
+    color: #7d6565; /* Text color for buttons */
+    border: none;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.art:hover,
+.game:hover {
+    background-color: #ffeef8; /* Change this to a darker red on hover if desired */
+    transform: scale(1.1);
+}
+
+.artsee{
+    position: absolute;
+    top: 0;
+    margin-top: 8%;
+    left: 5%;
+    display: center;
+    z-index: 1;
+    padding: 15% 45%;
+    border-radius: 50px;
+    background-color: #e0cbd2;
+    animation-name: seecon;
+    animation-duration: 0.5s;
+}
+
+.artl {
+    opacity: 0.0;
+    position: absolute;
+	padding: 10px 30px;
+	border-radius: 30px;
+	margin-top: 5%;
+	margin-bottom: 5px;
+    margin-left: -4%;
+	border:solid;
+    font-family: 'Anton', sans-serif;
+	color: #856162;
+	border-color: #ffeef8;
+	cursor: pointer;
+	background-color: #51d2e1;
+	font-size: 10px;
+	font-weight: bold;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.artl:hover{
+	background-color: #ffeef8;
+    color: #856162;
+}
+
+.content1 h1{
+    opacity: 0.0;
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-top: 11%;
+    margin-left: 42%;
+    bottom: 0px;
+    right: auto;
+    color: #fcefba;
+    font-family: 'Gellatio', sans-serif;
+    font-size: 3vw;
+    transition: 0.5s;
+}
+
+.content1{
+    position:absolute;
+    top: 0;
+    left: 0;
+    margin-left: 2%;
+    margin-top: 2%;
+    padding: 15% 48%;
+    border-radius: 50px;
+    background-image: url(img/SeeArt.png);
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    animation: seecont ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    transition: 0.3s;
+}
+
+.content1:hover{
+    top: 0;
+    left: 0;
+    margin-left: 3%;
+    margin-top: 3%;
+    padding: 14% 47%;
+    background:linear-gradient( #7d656513, #7d6565), url(img/SeeArt.png);
+    background-position: center;
+    background-size: 1800px 1350px;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    color: #7d6565;
+    box-shadow:5px 8px 5px #856162;
+    transition: 0.5s;
+}
+
+.content1:hover h1{
+    opacity: 1;
+    top: 0;
+    left: 0;
+    margin-top: 5%;
+    margin-left: 33%;
+    display: block;
+    font-size: 6vw;
+    transition: 0.5s;
+}
+
+.content1:hover .artl{
+    display: block;
+    margin-top: 5%;
+	margin-bottom: 5px;
+    margin-left: -6%;
+    font-size: 20px;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.gamesee{
+    position: absolute;
+    top: 0;
+    margin-top: 39%;
+    left: 5%;
+    display: center;
+    z-index: 1;
+    padding: 15% 45%;
+    border-radius: 50px;
+    background-color: #e0cbd2;
+    animation-name: seecon;
+    animation-duration: 0.5s;
+}
+
+.gamel {
+    opacity: 0.0;
+    position: absolute;
+	padding: 10px 30px;
+	border-radius: 30px;
+	margin-top: 3%;
+	margin-bottom: 5px;
+    margin-left: -4%;
+	border:solid;
+    font-family: 'Anton', sans-serif;
+	color: #856162;
+	border-color: #ffeef8;
+	cursor: pointer;
+	background-color: #51d2e1;
+	font-size: 10px;
+	font-weight: bold;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.gamel:hover{
+	background-color: #ffeef8;
+    color: #856162;
+}
+
+.content2 h1{
+    opacity: 0.0;
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-top: 11%;
+    margin-left: 40%;
+    bottom: 0px;
+    right: auto;
+    color: #fcefba;
+    font-family: 'Gellatio', sans-serif;
+    font-size: 3vw;
+    transition: 0.3s;
+}
+
+.content2{
+    position:absolute;
+    top: 0;
+    left: 0;
+    margin-left: 2%;
+    margin-top: 2%;
+    padding: 15% 48%;
+    border-radius: 50px;
+    background-image: url(img/SeeGame.png);
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+}
+
+.content2:hover{
+    top: 0;
+    left: 0;
+    margin-left: 3%;
+    margin-top: 3%;
+    padding: 14% 47%;
+    background:linear-gradient( #7d656513, #7d6565), url(img/SeeGame.png);
+    background-position: center;
+    background-size: 1800px 1350px;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    color: #7d6565;
+    box-shadow:5px 8px 5px #856162;
+    transition: 0.5s;
+}
+
+.content2:hover h1{
+    opacity: 1;
+    top: 0;
+    left: 0;
+    margin-top: 5%;
+    margin-left: 25%;
+    display: block;
+    font-size: 6vw;
+    transition: 0.5s;
+}
+
+.content2:hover .gamel{
+    display: block;
+    margin-top: 5%;
+	margin-bottom: 5px;
+    margin-left: -6%;
+    font-size: 20px;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.footer{
+    position: absolute;
+    background-color: #7d6565;
+    height: 30px;
+	width: 100%;
+    margin-top: 78%;
+    margin-bottom: 20px;
+    top: 0;
+}
+
+.footer1{
+    position: absolute;
+    background-color: #7d6565;
+    color: #ffeef8;
+    border-radius: 30px;
+    height: 100px;
+	width: 100%;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.footer1 img{
+    height: 40px;
+    width: 40px;
+    margin-top: 15px;
+}
+
+.fp{
+    z-index: 5;
+    position: absolute  ;
+    font-size: 15px;
+    color: #ffeef8;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    text-align: center;
+}
+
+.footer1 img:hover{
+    transform: scale(1.2);
+}
+
+.dark-mode {
+    background-color:#242121;
+    color: white;
+}
+
+.dark-mode .headerbox{
+    background-color:#3e3535;
+}
+
+.dark-mode .headerbox1{
+    background-color:#3e3535;
+}
+
+.dark-mode .headerboxmenu{
+    background-color:#3e3535;
+}
+
+.dark-mode .popup{
+    background-color:#3e3535;
+}
+
+.dark-mode .artsee{
+    background-color:#4d3e3e;
+}
+
+.dark-mode .content1:hover{
+    box-shadow:5px 8px 5px #3a3030;
+}
+
+.dark-mode .gamesee{
+    background-color:#4d3e3e;
+}
+
+.dark-mode .content2:hover{
+    box-shadow:5px 8px 5px #3a3030;
+}
+
+.dark-mode .footer{
+    background-color:#3e3535;
+    color:#fcefba;
+}
+
+.dark-mode .footer1{
+    background-color:#3e3535;
+    color:#fcefba;
+}
+
+@keyframes head {
+    from {
+        top: -100px;
+      }
+    
+      to {
+        top: 0;
+      }
+}
+
+@keyframes headd {
+    from {
+        top: -100px;
+      }
+    
+      to {
+        top: 0;
+      }
+}
+
+@keyframes seecon {
+    from {
+        left: -300px;
+      }
+    
+      to {
+        left: 5%;
+      }
+}
+
+@keyframes seecont {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .headerbox1 h1{
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 1%;
+        margin-left: 15%;
+        font-family: 'Gagalin', sans-serif;
+        font-size: 50px;
+        color: #ffeef8;
+        transition: 0.5s;
+    }
+
+    .headerboxmenu{
+        position: fixed;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        top: 0;
+        right: 0;
+        margin-right: 10%;
+        margin-top: 1%;
+        background-color: #7d6565;
+        border-radius: 50px;
+        height: 50px;
+        width: 50%;
+        z-index: 905;
+        transition: 0.5s;
+        animation-name: head;
+        animation-duration: 1s;
+    }
+    
+    .headerboxmenu a{
+        padding: 2px 12px;
+        border-radius: 100px;
+        font-family: 'Anton', sans-serif;
+        color: #7d6565;
+        text-decoration: none;
+        letter-spacing: 2px;
+        font-size: 20px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .hovernav {
+        z-index: 5;
+        display: inline-block;
+        background-color: #feb5a6;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 2px 12px;
+        border-radius: 100px;
+        font-family: 'Anton', sans-serif;
+        color: #7d6565;
+        text-decoration: none;
+        letter-spacing: 2px;
+        font-size: 20px;
+    }
+
+    .popup {
+        display: none;
+        position: absolute;
+        padding: 10px 10px;
+        background-color: #7d6565;
+        border-radius: 10px;
+        top: 45px;
+        margin-left: -50px;
+        z-index: 3;
+    }
+
+    .artsee{
+        position: absolute;
+        top: 0;
+        margin-top: 11.5%;
+        left: 5%;
+        display: center;
+        z-index: 1;
+        padding: 24.5% 45%;
+        border-radius: 50px;
+        background-color: #e0cbd2;
+        transition: 0.5s;
+        animation-name: seecon;
+        animation-duration: 0.5s;
+    }
+
+    .artl {
+        opacity: 0.0;
+        position: absolute;
+        padding: 10px 30px;
+        border-radius: 30px;
+        margin-top: 5%;
+        margin-bottom: 5px;
+        margin-left: -4%;
+        border:solid;
+        font-family: 'Anton', sans-serif;
+        color: #856162;
+        border-color: #ffeef8;
+        cursor: pointer;
+        background-color: #51d2e1;
+        font-size: 10px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: 0.5s;
+    }
+    
+    .artl:hover{
+        background-color: #ffeef8;
+        color: #856162;
+    }
+    
+    .content1 h1{
+        opacity: 0.0;
+        position:absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin-top: 11%;
+        margin-left: 42%;
+        bottom: 0px;
+        right: auto;
+        color: #fcefba;
+        font-family: 'Gellatio', sans-serif;
+        font-size: 3vw;
+        transition: 0.5s;
+    }
+
+    .content1{
+        position:absolute;
+        top: 0;
+        left: 0;
+        margin-left: 2%;
+        margin-top: 2%;
+        padding: 25% 48%;
+        border-radius: 50px;
+        background-image: url(img/SeeArt.png);
+        background-position: center;
+        background-size:cover;
+        background-repeat: no-repeat;
+        animation: seecont ease 3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        transition: 0.5s;
+    }
+
+    .content1:hover{
+        top: 0;
+        left: 0;
+        margin-left: 3%;
+        margin-top: 3%;
+        padding: 24% 47%;
+        background:linear-gradient( #7d656513, #7d6565), url(img/SeeArt.png);
+        background-position: center;
+        background-size: 1800px 1350px;
+        background-repeat: no-repeat;
+        opacity: 0.8;
+        color: #7d6565;
+        box-shadow:5px 8px 5px #856162;
+        transition: 0.5s;
+    }
+    
+    .content1:hover h1{
+        opacity: 1;
+        top: 0;
+        left: 0;
+        margin-top: 5%;
+        margin-left: 18%;
+        display: block;
+        font-size: 11vw;
+        transition: 0.5s;
+    }
+    
+    .content1:hover .artl{
+        display: block;
+        margin-top: 10%;
+        margin-bottom: 5px;
+        margin-left: -7%;
+        font-size: 20px;
+        opacity: 1;
+        transition: 0.5s;
+    }
+
+    .gamesee{
+        position: absolute;
+        top: 0;
+        margin-top: 63%;
+        left: 5%;
+        display: center;
+        z-index: 1;
+        padding: 24.5% 45%;
+        border-radius: 50px;
+        background-color: #e0cbd2;
+        transition: 0.5s;
+        animation-name: seecon;
+        animation-duration: 0.5s;
+    }
+
+    .content2{
+        position:absolute;
+        top: 0;
+        left: 0;
+        margin-left: 2%;
+        margin-top: 2%;
+        padding: 25% 48%;
+        border-radius: 50px;
+        background-image: url(img/SeeGame.png);
+        background-position: center;
+        background-size:cover;
+        background-repeat: no-repeat;
+        animation: seecont ease 3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        transition: 0.5s;
+    }
+
+    .content2:hover{
+        top: 0;
+        left: 0;
+        margin-left: 3%;
+        margin-top: 3%;
+        padding: 24% 47%;
+        background:linear-gradient( #7d656513, #7d6565), url(img/SeeGame.png);
+        background-position: center;
+        background-size: 1800px 1350px;
+        background-repeat: no-repeat;
+        opacity: 0.8;
+        color: #7d6565;
+        box-shadow:5px 8px 5px #856162;
+        transition: 0.5s;
+    }
+    
+    .content2:hover h1{
+        opacity: 1;
+        top: 0;
+        left: 0;
+        margin-top: 5%;
+        margin-left: 8%;
+        display: block;
+        font-size: 10vw;
+        transition: 0.5s;
+    }
+    
+    .content2:hover .gamel{
+        display: block;
+        margin-top: 10%;
+        margin-bottom: 5px;
+        margin-left: -7%;
+        font-size: 20px;
+        opacity: 1;
+        transition: 0.5s;
+    }
+
+    .footer{
+        position: absolute;
+        background-color: #7d6565;
+        height: 30px;
+        width: 100%;
+        margin-top: 125%;
+        margin-bottom: 20px;
+        top: 0;
+    }
+    
+    .footer1{
+        position: absolute;
+        background-color: #7d6565;
+        color: #ffeef8;
+        border-radius: 30px;
+        height: 100px;
+        width: 100%;
+        bottom: 0px;
+        display: flex;
+        justify-content: center;
+    
+    }
+}
+@media screen and (max-width: 750px) {
+    .header img{
+        position: fixed;
+        top: 0;
+        right: 0;
+        margin-right: 3%;
+        margin-top: 1.5%;
+        height: 30px;
+        width: 30px;
+        padding: 5px 5px;
+        background-color:#bba9a9;
+        border-radius: 30px;
+        animation-name: headd;
+        animation-duration: 1s;
+        z-index: 9999;
+        transition: 0.5s;
+    }
+
+    .headerbox1 img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top: 0.3%;
+        margin-left: 5%;
+        height: 50px;
+        width: 50px;
+    }
+
+    .headerbox1 h1{
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 2%;
+        margin-left: 15%;
+        font-family: 'Gagalin', sans-serif;
+        font-size: 40px;
+        color: #ffeef8;
+    }
+    .headerboxmenu{
+        position: fixed;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        top: 0;
+        right: 0;
+        margin-right: 10%;
+        margin-top: 1%;
+        background-color: #7d6565;
+        border-radius: 50px;
+        height: 50px;
+        width: 50%;
+        z-index: 905;
+        transition: 0.5s;
+        animation-name: head;
+        animation-duration: 1s;
+    }
+    
+    .headerboxmenu a{
+        padding: 5px 12px;
+        border-radius: 100px;
+        font-family: 'Anton', sans-serif;
+        color: #7d6565;
+        text-decoration: none;
+        letter-spacing: 2px;
+        font-size: 15px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .hovernav {
+        z-index: 5;
+        display: inline-block;
+        background-color: #feb5a6;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 5px 12px;
+        border-radius: 100px;
+        font-family: 'Anton', sans-serif;
+        color: #7d6565;
+        text-decoration: none;
+        letter-spacing: 2px;
+        font-size: 15px;
+    }
+    
+    .popup {
+        display: none;
+        position: absolute;
+        padding: 10px 10px;
+        background-color: #7d6565;
+        border-radius: 10px;
+        top: 40px;
+        margin-left: -50px;
+        z-index: 3;
+    }
+    
+    .hovernav:hover .popup {
+        z-index: 5;
+        transition: 0.5s;
+        display: block;
+    }
+    
+    .hovernav:hover {
+        background-color:#ffeef8;
+        transition: 0.5s;
+        transform: scale(1.1);
+    }
+    
+    .popup a {
+        left: 0;
+        display: block;
+        color: #7d6565;
+        text-decoration: none;
+    }
+    
+    .popup a:hover {
+        background-color: #ffeef8;
+    }
+
+    .artsee{
+        position: absolute;
+        top: 0;
+        margin-top: 14%;
+        left: 5%;
+        display: center;
+        z-index: 1;
+        padding: 30% 45%;
+        border-radius: 50px;
+        background-color: #e0cbd2;
+        transition: 0.5s;
+        animation-name: seecon;
+        animation-duration: 0.5s;
+    }
+
+    .artl {
+        opacity: 0.0;
+        position: absolute;
+        padding: 10px 30px;
+        border-radius: 30px;
+        margin-top: 5%;
+        margin-bottom: 5px;
+        margin-left: -4%;
+        border:solid;
+        font-family: 'Anton', sans-serif;
+        color: #856162;
+        border-color: #ffeef8;
+        cursor: pointer;
+        background-color: #51d2e1;
+        font-size: 10px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: 0.5s;
+    }
+    
+    .artl:hover{
+        background-color: #ffeef8;
+        color: #856162;
+    }
+    
+    .content1 h1{
+        opacity: 0.0;
+        position:absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin-top: 11%;
+        margin-left: 42%;
+        bottom: 0px;
+        right: auto;
+        color: #fcefba;
+        font-family: 'Gellatio', sans-serif;
+        font-size: 3vw;
+        transition: 0.5s;
+    }
+
+    .content1{
+        position:absolute;
+        top: 0;
+        left: 0;
+        margin-left: 2%;
+        margin-top: 2%;
+        padding: 31% 48%;
+        border-radius: 50px;
+        background-image: url(img/SeeArt.png);
+        background-position: center;
+        background-size:cover;
+        background-repeat: no-repeat;
+        animation: seecont ease 3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        transition: 0.5s;
+    }
+
+    .content1:hover{
+        top: 0;
+        left: 0;
+        margin-left: 3%;
+        margin-top: 3%;
+        padding: 30% 47%;
+        background:linear-gradient( #7d656513, #7d6565), url(img/SeeArt.png);
+        background-position: center;
+        background-size: 1800px 1350px;
+        background-repeat: no-repeat;
+        opacity: 0.8;
+        color: #7d6565;
+        box-shadow:5px 8px 5px #856162;
+        transition: 0.5s;
+    }
+    
+    .content1:hover h1{
+        opacity: 1;
+        top: 0;
+        left: 0;
+        margin-top: 5%;
+        margin-left: 10%;
+        display: block;
+        font-size: 13vw;
+        transition: 0.5s;
+    }
+    
+    .content1:hover .artl{
+        display: block;
+        margin-top: 10%;
+        margin-bottom: 5px;
+        margin-left: -10%;
+        font-size: 20px;
+        opacity: 1;
+        transition: 0.5s;
+    }
+
+    .gamesee{
+        position: absolute;
+        top: 0;
+        margin-top: 77.5%;
+        left: 5%;
+        display: center;
+        z-index: 1;
+        padding: 30% 45%;
+        border-radius: 50px;
+        background-color: #e0cbd2;
+        transition: 0.5s;
+        animation-name: seecon;
+        animation-duration: 0.5s;
+    }
+
+    .content2{
+        position:absolute;
+        top: 0;
+        left: 0;
+        margin-left: 2%;
+        margin-top: 2%;
+        padding: 31% 48%;
+        border-radius: 50px;
+        background-image: url(img/SeeGame.png);
+        background-position: center;
+        background-size:cover;
+        background-repeat: no-repeat;
+        animation: seecont ease 3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        transition: 0.5s;
+    }
+
+    .content2:hover{
+        top: 0;
+        left: 0;
+        margin-left: 3%;
+        margin-top: 3%;
+        padding: 30% 47%;
+        background:linear-gradient( #7d656513, #7d6565), url(img/SeeGame.png);
+        background-position: center;
+        background-size: 1800px 1350px;
+        background-repeat: no-repeat;
+        opacity: 0.8;
+        color: #7d6565;
+        box-shadow:5px 8px 5px #856162;
+        transition: 0.5s;
+    }
+    
+    .content2:hover h1{
+        opacity: 1;
+        top: 0;
+        left: 0;
+        margin-top: 5%;
+        margin-left: 3%;
+        display: block;
+        font-size: 11vw;
+        transition: 0.5s;
+    }
+    
+    .content2:hover .gamel{
+        display: block;
+        margin-top: 10%;
+        margin-bottom: 5px;
+        margin-left: -10%;
+        font-size: 20px;
+        opacity: 1;
+        transition: 0.5s;
+    }
+
+    .footer{
+        position: absolute;
+        background-color: #7d6565;
+        height: 30px;
+        width: 100%;
+        margin-top: 152%;
+        margin-bottom: 20px;
+        top: 0;
+    }
+    
+    .footer1{
+        position: absolute;
+        background-color: #7d6565;
+        color: #ffeef8;
+        border-radius: 30px;
+        height: 100px;
+        width: 100%;
+        bottom: 0px;
+        display: flex;
+        justify-content: center;
+    
+    }
+}
+@media screen and (max-width: 650px) {
+    .headerbox{
+        position: fixed;
+        background-color: #7d6565;
+        height: 30px;
+        width: 100%;
+        animation-name: head;
+        animation-duration: 1s;
+    }
+
+    .header img{
+        position: fixed;
+        top: 0;
+        right: 0;
+        margin-right: 8%;
+        margin-top: 2%;
+        height: 30px;
+        width: 30px;
+        padding: 5px 5px;
+        background-color: #bba9a9;
+        border-radius: 30px;
+        animation-name: headd;
+        animation-duration: 1s;
+        z-index: 9999;
+        transition: 0.5s;
+    }
+
+    .headerbox1{
+        position: fixed;
+        border-radius: 30px;
+        background-color: #7d6565;
+        height: 70px;
+        width: 100%;
+        animation-name: head;
+        animation-duration: 1s;
+        z-index: 900;
+    }
+
+    .headerbox1 img{
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin-top: 0.3%;
+        margin-left: 5%;
+        height: 50px;
+        width: 50px;
+    }
+
+    .headerbox1 h1{
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 2.5%;
+        margin-left: 17.5%;
+        font-family: 'Gagalin', sans-serif;
+        font-size: 40px;
+        color: #ffeef8;
+    }
+    .headerboxmenu{
+        position: fixed;
+        align-items: center;
+        top: 0;
+        margin-right: 15%;
+        margin-top: 14.5%;
+        background-color: #7d6565;
+        border-radius: 50px;
+        height: 55px;
+        width: 68%;
+        z-index: 905;
+        transition: 0.5s;
+        animation-name: head;
+        animation-duration: 1s;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+    
+    .headerboxmenu a{
+        padding: 5px 12px;
+        border-radius: 100px;
+        font-family: 'Anton', sans-serif;
+        color: #7d6565;
+        text-decoration: none;
+        letter-spacing: 2px;
+        font-size: 20px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .hovernav {
+        z-index: 5;
+        display: inline-block;
+        background-color: #feb5a6;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 5px 12px;
+        border-radius: 100px;
+        font-family: 'Anton', sans-serif;
+        color: #7d6565;
+        text-decoration: none;
+        letter-spacing: 2px;
+        font-size: 20px;
+    }
+    
+    .popup {
+        display: none;
+        position: absolute;
+        padding: 10px 10px;
+        background-color: #7d6565;
+        border-radius: 10px;
+        top: 0px;
+        margin-left: 90px;
+        margin-top: -30px;
+        z-index: 3;
+    }
+    
+    .hovernav:hover .popup {
+        z-index: 5;
+        transition-delay: 1s;
+        margin-top: 45px;
+        right: 0;
+        margin-right: -30px;
+        display: block;
+    }
+    
+    .hovernav:hover {
+        background-color:#ffeef8;
+        transition: 0.5s;
+        transform: scale(1.1);
+    }
+    
+    .popup a {
+        left: 0;
+        display: block;
+        color: #7d6565;
+        text-decoration: none;
+    }
+    
+    .popup a:hover {
+        background-color: #ffeef8;
+    }
+
+    .art{
+        font-size: 20px;
+        font-family: 'Anton', sans-serif;
+        display: block;
+        width: 105px;
+        margin-bottom: 10%;
+        background-color: #feb5a6; /* Change this to red */
+        color: #7d6565; /* Text color for buttons */
+        border: none;
+        border-radius: 30px;
+        text-align: center;
+    }
+    
+    .game{
+        font-size: 20px;
+        font-family: 'Anton', sans-serif;
+        display: block;
+        left: 0;
+        margin-top: 10%;
+        background-color: #feb5a6; /* Change this to red */
+        color: #7d6565; /* Text color for buttons */
+        border: none;
+        border-radius: 30px;
+        text-align: center;
+    }
+
+    .artsee{
+        position: absolute;
+        top: 0;
+        margin-top: 26.5%;
+        left: 5%;
+        display: center;
+        z-index: 1;
+        padding: 40% 45%;
+        border-radius: 50px;
+        background-color: #e0cbd2;
+        transition: 0.5s;
+        animation-name: seecon;
+        animation-duration: 0.5s;
+    }
+
+    .artl {
+        opacity: 0.0;
+        position: absolute;
+        padding: 10px 30px;
+        border-radius: 30px;
+        margin-top: 5%;
+        margin-bottom: 5px;
+        margin-left: -4%;
+        border:solid;
+        font-family: 'Anton', sans-serif;
+        color: #856162;
+        border-color: #ffeef8;
+        cursor: pointer;
+        background-color: #51d2e1;
+        font-size: 10px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: 0.5s;
+    }
+    
+    .artl:hover{
+        background-color: #ffeef8;
+        color: #856162;
+    }
+    
+    .content1 h1{
+        opacity: 0.0;
+        position:absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin-top: 11%;
+        margin-left: 42%;
+        bottom: 0px;
+        right: auto;
+        color: #fcefba;
+        font-family: 'Gellatio', sans-serif;
+        font-size: 3vw;
+        transition: 0.5s;
+    }
+
+    .content1{
+        position:absolute;
+        top: 0;
+        left: 0;
+        margin-left: 2%;
+        margin-top: 2%;
+        padding: 42% 48%;
+        border-radius: 50px;
+        background-image: url(img/SeeArt.png);
+        background-position: center;
+        background-size:cover;
+        background-repeat: no-repeat;
+        animation: seecont ease 3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        transition: 0.5s;
+    }
+
+    .content1:hover{
+        top: 0;
+        left: 0;
+        margin-left: 3%;
+        margin-top: 3%;
+        padding: 40% 47%;
+        background:linear-gradient( #7d656513, #7d6565), url(img/SeeArt.png);
+        background-position: center;
+        background-size: 1800px 1350px;
+        background-repeat: no-repeat;
+        opacity: 0.8;
+        color: #7d6565;
+        box-shadow:5px 8px 5px #856162;
+        transition: 0.5s;
+    }
+    
+    .content1:hover h1{
+        opacity: 1;
+        top: 0;
+        left: 0;
+        margin-top: 5%;
+        margin-left: 10%;
+        display: block;
+        font-size: 13vw;
+        transition: 0.5s;
+    }
+    
+    .content1:hover .artl{
+        display: block;
+        margin-top: 10%;
+        margin-bottom: 5px;
+        margin-left: -10%;
+        font-size: 20px;
+        opacity: 1;
+        transition: 0.5s;
+    }
+
+    .gamesee{
+        position: absolute;
+        top: 0;
+        margin-top: 110%;
+        left: 5%;
+        display: center;
+        z-index: 1;
+        padding: 40% 45%;
+        border-radius: 50px;
+        background-color: #e0cbd2;
+        transition: 0.5s;
+        animation-name: seecon;
+        animation-duration: 0.5s;
+    }
+
+    .content2{
+        position:absolute;
+        top: 0;
+        left: 0;
+        margin-left: 2%;
+        margin-top: 2%;
+        padding: 42% 48%;
+        border-radius: 50px;
+        background-image: url(img/SeeGame.png);
+        background-position: center;
+        background-size:cover;
+        background-repeat: no-repeat;
+        animation: seecont ease 3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        transition: 0.5s;
+    }
+
+    .content2:hover{
+        top: 0;
+        left: 0;
+        margin-left: 3%;
+        margin-top: 3%;
+        padding: 40% 47%;
+        background:linear-gradient( #7d656513, #7d6565), url(img/SeeGame.png);
+        background-position: center;
+        background-size: 1800px 1350px;
+        background-repeat: no-repeat;
+        opacity: 0.8;
+        color: #7d6565;
+        box-shadow:5px 8px 5px #856162;
+        transition: 0.5s;
+    }
+    
+    .content2:hover h1{
+        opacity: 1;
+        top: 0;
+        left: 0;
+        margin-top: 5%;
+        margin-left: 3%;
+        display: block;
+        font-size: 11vw;
+        transition: 0.5s;
+    }
+    
+    .content2:hover .gamel{
+        display: block;
+        margin-top: 10%;
+        margin-bottom: 5px;
+        margin-left: -10%;
+        font-size: 20px;
+        opacity: 1;
+        transition: 0.5s;
+    }
+
+    .footer{
+        position: absolute;
+        background-color: #7d6565;
+        height: 30px;
+        width: 100%;
+        margin-top: 207.5%;
+        margin-bottom: 20px;
+        top: 0;
+    }
+    
+    .footer1{
+        position: absolute;
+        background-color: #7d6565;
+        color: #ffeef8;
+        border-radius: 30px;
+        height: 100px;
+        width: 100%;
+        bottom: 0px;
+        display: flex;
+        justify-content: center;
+    
+    }
+}
+@media screen and (max-width: 550px) {
+    .headerbox{
+        position: fixed;
+        background-color: #7d6565;
+        height: 30px;
+        width: 100%;
+        animation-name: head;
+        animation-duration: 1s;
+    }
+
+    .header img{
+        position: fixed;
+        top: 0;
+        right: 0;
+        margin-right: 8%;
+        margin-top: 2%;
+        height: 30px;
+        width: 30px;
+        padding: 5px 5px;
+        background-color: #bba9a9;
+        border-radius: 30px;
+        animation-name: headd;
+        animation-duration: 1s;
+        z-index: 9999;
+        transition: 0.5s;
+    }
+
+    .headerbox1{
+        position: fixed;
+        border-radius: 30px;
+        background-color: #7d6565;
+        height: 70px;
+        width: 100%;
+        animation-name: head;
+        animation-duration: 1s;
+        z-index: 900;
+    }
+
+    .headerbox1 img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top: 0.3%;
+        margin-left: 5%;
+        height: 50px;
+        width: 50px;
+    }
+
+    .headerbox1 h1{
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 2.5%;
+        margin-left: 20%;
+        font-family: 'Gagalin', sans-serif;
+        font-size: 40px;
+        color: #ffeef8;
+    }
+    .headerboxmenu{
+        position: fixed;
+        align-items: center;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%);
+        margin-top: 18%;
+        background-color: #7d6565;
+        border-radius: 50px;
+        height: 55px;
+        width: 75%;
+        z-index: 905;
+        transition: 0.5s;
+        animation-name: head;
+        animation-duration: 1s;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+    
+    .headerboxmenu a{
+        padding: 5px 12px;
+        border-radius: 100px;
+        font-family: 'Anton', sans-serif;
+        color: #7d6565;
+        text-decoration: none;
+        letter-spacing: 2px;
+        font-size: 16px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .hovernav {
+        z-index: 5;
+        display: inline-block;
+        background-color: #feb5a6;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 5px 12px;
+        border-radius: 100px;
+        font-family: 'Anton', sans-serif;
+        color: #7d6565;
+        text-decoration: none;
+        letter-spacing: 2px;
+        font-size: 16px;
+    }
+    
+    .popup {
+        display: none;
+        position: absolute;
+        padding: 10px 10px;
+        background-color: #7d6565;
+        border-radius: 10px;
+        top: 0px;
+        margin-left: 90px;
+        margin-top: -30px;
+        z-index: 3;
+    }
+    
+    .hovernav:hover .popup {
+        z-index: 5;
+        transition-delay: 1s;
+        margin-top: 40px;
+        right: 0;
+        margin-right: -30px;
+        display: block;
+        padding: 10px 10px;
+    }
+    
+    .hovernav:hover {
+        background-color:#ffeef8;
+        transition: 0.5s;
+        transform: scale(1.1);
+    }
+    
+    .popup a {
+        display: block;
+        color: #7d6565;
+        text-decoration: none;
+    }
+    
+    .popup a:hover {
+        background-color: #ffeef8;
+    }
+
+    .art{
+        font-size: 20px;
+        font-family: 'Anton', sans-serif;
+        display: block;
+        width: 90px;
+        margin-bottom: 10%;
+        background-color: #feb5a6; /* Change this to red */
+        color: #7d6565; /* Text color for buttons */
+        border: none;
+        border-radius: 30px;
+        text-align: center;
+    }
+
+    .artsee{
+        position: absolute;
+        top: 0;
+        margin-top: 33%;
+        left: 5%;
+        display: center;
+        z-index: 1;
+        padding: 41% 45%;
+        border-radius: 50px;
+        background-color: #e0cbd2;
+        transition: 0.5s;
+        animation-name: seecon;
+        animation-duration: 0.5s;
+    }
+
+    .content1{
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-left: 3%;
+        margin-top: 4%;
+        padding: 41.5% 47%;
+        border-radius: 50px;
+        background-image: url(img/SeeArt.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        animation: seecont ease 3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        transition: 0.5s;
+    }
+
+    .content1 h1{
+        opacity: 0.0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin-top: 11%;
+        margin-left: 42%;
+        bottom: 0px;
+        right: auto;
+        color: #fcefba;
+        font-family: 'Gellatio', sans-serif;
+        font-size: 3vw;
+        transition: 0.5s;
+    }
+
+    .artl {
+        opacity: 0.0;
+        position: absolute;
+        padding: 10px 30px;
+        border-radius: 30px;
+        margin-top: 5%;
+        margin-bottom: 5px;
+        margin-left: -4%;
+        border:solid;
+        font-family: 'Anton', sans-serif;
+        color: #856162;
+        border-color: #ffeef8;
+        cursor: pointer;
+        background-color: #51d2e1;
+        font-size: 10px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: 0.5s;
+    }
+
+    .content1:hover{
+        top: 0;
+        left: 0;
+        margin-left: 3%;
+        margin-top: 4%;
+        padding: 41.5% 47%;
+        border-radius: 50px;
+        background:linear-gradient( #7d656513, #7d6565), url(img/SeeArt.png);
+        background-position: center;
+        background-size: 1800px 1350px;
+        background-repeat: no-repeat;
+        opacity: 0.8;
+        color: #7d6565;
+        box-shadow:5px 8px 5px #856162;
+        transition: 0.5s;
+    }
+    
+    .content1:hover h1{
+        opacity: 1;
+        top: 0;
+        left: 0;
+        margin-top: 8%;
+        margin-left: 10%;
+        display: block;
+        font-size: 13vw;
+        transition: 0.5s;
+    }
+    
+    .content1:hover .artl{
+        display: block;
+        margin-top: 10%;
+        margin-bottom: 5px;
+        margin-left: -14%;
+        font-size: 20px;
+        opacity: 1;
+        transition: 0.5s;
+    }
+
+    .gamesee{
+        position: absolute;
+        top: 0;
+        margin-top: 118%;
+        left: 5%;
+        display: center;
+        z-index: 1;
+        padding: 41% 45%;
+        border-radius: 50px;
+        background-color: #e0cbd2;
+        transition: 0.5s;
+        animation-name: seecon;
+        animation-duration: 0.5s;
+    }
+
+    .content2{
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-left: 3%;
+        margin-top: 4%;
+        padding: 41.5% 47%;
+        border-radius: 50px;
+        background-image: url(img/SeeGame.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        animation: seecont ease 3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        transition: 0.5s;
+    }
+
+    .content2:hover{
+        top: 0;
+        left: 0;
+        margin-left: 3%;
+        margin-top: 4%;
+        padding: 41.5% 47%;
+        border-radius: 50px;
+        background: linear-gradient( #7d656513, #7d6565), url(img/SeeGame.png);
+        background-position: center;
+        background-size: 1800px 1350px;
+        background-repeat: no-repeat;
+        opacity: 0.8;
+        color: #7d6565;
+        box-shadow: 5px 8px 5px #856162;
+        transition: 0.5s;
+    }
+    
+    .content2:hover h1{
+        opacity: 1;
+        top: 0;
+        left: 0;
+        margin-top: 8%;
+        margin-left: 3%;
+        display: block;
+        font-size: 11vw;
+        transition: 0.5s;
+    }
+    
+    .content2:hover .gamel{
+        display: block;
+        margin-top: 10%;
+        margin-bottom: 5px;
+        margin-left: -14%;
+        font-size: 20px;
+        opacity: 1;
+        transition: 0.5s;
+    }
+
+    .footer{
+        position: absolute;
+        background-color: #7d6565;
+        height: 30px;
+        width: 100%;
+        margin-top: 220%;
+        margin-bottom: 20px;
+        top: 0;
+    }
+    
+    .footer1{
+        position: absolute;
+        background-color: #7d6565;
+        color: #ffeef8;
+        border-radius: 30px;
+        height: 100px;
+        width: 100%;
+        bottom: 0px;
+        display: flex;
+        justify-content: center;
+    
+    }
+}
+@media screen and (max-width: 450px) {
+    .scroll-to-top {
+        padding: 10px 10px;
+    }
+    
+    .headerbox{
+        position: fixed;
+        background-color: #7d6565;
+        height: 25px;
+        width: 100%;
+        animation-name: head;
+        animation-duration: 1s;
+    }
+
+    .header img{
+        position: fixed;
+        top: 0;
+        right: 0;
+        margin-right: 10%;
+        margin-top: 2.5%;
+        height: 20px;
+        width: 20px;
+        padding: 5px 5px;
+        background-color: #bba9a9;
+        border-radius: 30px;
+        animation-name: headd;
+        animation-duration: 1s;
+        z-index: 9999;
+        transition: 0.5s;
+    }
+
+    .headerbox1{
+        position: fixed;
+        border-radius: 30px;
+        background-color: #7d6565;
+        height: 50px;
+        width: 100%;
+        animation-name: head;
+        animation-duration: 1s;
+        z-index: 900;
+    }
+
+    .headerbox1 img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top: 1%;
+        margin-left: 8%;
+        height: 30px;
+        width: 30px;
+    }
+
+    .headerbox1 h1{
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 3%;
+        margin-left: 25%;
+        font-family: 'Gagalin', sans-serif;
+        font-size: 30px;
+        color: #ffeef8;
+    }
+    .headerboxmenu{
+        position: fixed;
+        align-items: center;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%);
+        margin-top: 16%;
+        background-color: #7d6565;
+        border-radius: 50px;
+        height: 38px;
+        width: 75%;
+        z-index: 905;
+        transition: 0.5s;
+        animation-name: head;
+        animation-duration: 1s;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+    
+    .headerboxmenu a{
+        padding: 5px 12px;
+        border-radius: 100px;
+        font-family: 'Anton', sans-serif;
+        color: #7d6565;
+        text-decoration: none;
+        letter-spacing: 2px;
+        font-size: 11px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .hovernav {
+        z-index: 5;
+        display: inline-block;
+        background-color: #feb5a6;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 5px 12px;
+        border-radius: 100px;
+        font-family: 'Anton', sans-serif;
+        color: #7d6565;
+        text-decoration: none;
+        letter-spacing: 2px;
+        font-size: 11px;
+    }
+    
+    .hovernav:hover .popup {
+        z-index: 5;
+        transition-delay: 1s;
+        margin-top: 30px;
+        right: 0;
+        margin-right: -20px;
+        display: block;
+        padding: 10px 10px;
+    }
+    
+    .hovernav:hover {
+        background-color:#ffeef8;
+        transition: 0.5s;
+        transform: scale(1.1);
+    }
+    
+    .popup a {
+        display: block;
+        color: #7d6565;
+        text-decoration: none;
+    }
+    
+    .popup a:hover {
+        background-color: #ffeef8;
+    }
+
+    .art{
+        font-size: 20px;
+        font-family: 'Anton', sans-serif;
+        display: block;
+        width: 65px;
+        margin-bottom: 10%;
+        background-color: #feb5a6; /* Change this to red */
+        color: #7d6565; /* Text color for buttons */
+        border: none;
+        border-radius: 30px;
+        text-align: center;
+    }
+
+    .artsee{
+        position: absolute;
+        top: 0;
+        margin-top: 29%;
+        left: 5%;
+        display: center;
+        z-index: 1;
+        padding: 41% 45%;
+        border-radius: 50px;
+        background-color: #e0cbd2;
+        transition: 0.5s;
+        animation-name: seecon;
+        animation-duration: 0.5s;
+    }
+
+    .content1{
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-left: 3%;
+        margin-top: 4%;
+        padding: 41.5% 47%;
+        border-radius: 50px;
+        background-image: url(img/SeeArt.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        animation: seecont ease 3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        transition: 0.5s;
+    }
+
+    .content1 h1{
+        opacity: 0.0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin-top: 11%;
+        margin-left: 42%;
+        bottom: 0px;
+        right: auto;
+        color: #fcefba;
+        font-family: 'Gellatio', sans-serif;
+        font-size: 3vw;
+        transition: 0.5s;
+    }
+
+    .artl {
+        opacity: 0.0;
+        position: absolute;
+        padding: 10px 30px;
+        border-radius: 30px;
+        margin-top: 5%;
+        margin-bottom: 5px;
+        margin-left: -4%;
+        border:solid;
+        font-family: 'Anton', sans-serif;
+        color: #856162;
+        border-color: #ffeef8;
+        cursor: pointer;
+        background-color: #51d2e1;
+        font-size: 10px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: 0.5s;
+    }
+
+    .content1:hover{
+        top: 0;
+        left: 0;
+        margin-left: 3%;
+        margin-top: 4%;
+        padding: 41.5% 47%;
+        border-radius: 50px;
+        background:linear-gradient( #7d656513, #7d6565), url(img/SeeArt.png);
+        background-position: center;
+        background-size: 1800px 1350px;
+        background-repeat: no-repeat;
+        opacity: 0.8;
+        color: #7d6565;
+        box-shadow:5px 8px 5px #856162;
+        transition: 0.5s;
+    }
+    
+    .content1:hover h1{
+        opacity: 1;
+        top: 0;
+        left: 0;
+        margin-top: 8%;
+        margin-left: 10%;
+        display: block;
+        font-size: 14vw;
+        transition: 0.5s;
+    }
+    
+    .content1:hover .artl{
+        display: block;
+        margin-top: 10%;
+        margin-bottom: 5px;
+        margin-left: -20%;
+        font-size: 20px;
+        opacity: 1;
+        transition: 0.5s;
+    }
+
+    .gamesee{
+        position: absolute;
+        top: 0;
+        margin-top: 113%;
+        left: 5%;
+        display: center;
+        z-index: 1;
+        padding: 41% 45%;
+        border-radius: 50px;
+        background-color: #e0cbd2;
+        transition: 0.5s;
+        animation-name: seecon;
+        animation-duration: 0.5s;
+    }
+
+    .content2{
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-left: 3%;
+        margin-top: 4%;
+        padding: 41.5% 47%;
+        border-radius: 50px;
+        background-image: url(img/SeeGame.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        animation: seecont ease 3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        transition: 0.5s;
+    }
+
+    .content2:hover{
+        top: 0;
+        left: 0;
+        margin-left: 3%;
+        margin-top: 4%;
+        padding: 41.5% 47%;
+        border-radius: 50px;
+        background: linear-gradient( #7d656513, #7d6565), url(img/SeeGame.png);
+        background-position: center;
+        background-size: 1800px 1350px;
+        background-repeat: no-repeat;
+        opacity: 0.8;
+        color: #7d6565;
+        box-shadow: 5px 8px 5px #856162;
+        transition: 0.5s;
+    }
+    
+    .content2:hover h1{
+        opacity: 1;
+        top: 0;
+        left: 0;
+        margin-top: 8%;
+        margin-left: 4%;
+        display: block;
+        font-size: 11vw;
+        transition: 0.5s;
+    }
+    
+    .content2:hover .gamel{
+        display: block;
+        margin-top: 10%;
+        margin-bottom: 5px;
+        margin-left: -20%;
+        font-size: 20px;
+        opacity: 1;
+        transition: 0.5s;
+    }
+
+    .footer{
+        position: absolute;
+        background-color: #7d6565;
+        height: 30px;
+        width: 100%;
+        margin-top: 218%;
+        margin-bottom: 20px;
+        top: 0;
+    }
+    
+    .footer1{
+        position: absolute;
+        background-color: #7d6565;
+        color: #ffeef8;
+        border-radius: 30px;
+        height: 100px;
+        width: 100%;
+        bottom: 0px;
+        display: flex;
+        justify-content: center;
+    
+    }
+}

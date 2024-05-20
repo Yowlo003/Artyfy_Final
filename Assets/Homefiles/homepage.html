@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Logo.png" type="image/x-icon">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="headerbox"></div>
+        <div class="headerbox1">
+            <img src="Logo.png" alt="">
+            <h1>ARTYFY</h1>
+        </div>
+        <div class="headerboxmenu" id="headertop">
+            <a href="homepage.html" class="active">Home</a>
+            <a href="../About/About.html" class="dec">About</a>
+            <div class="hovernav" onclick="nav()" onmouseenter="showPopup()" onmouseleave="hidePopup()">
+                Blog &#9660;
+                <div class="popup" id="popup">
+                    <a href="../Artblog/artblog.html" class="art">Art Blog</a>
+                    <a href="../Gameblog/gameblog.html" class="game">Game Blog</a>
+                </div>
+            </div>
+            <a href="../Contact/Contact.html" class="dec">Contact</a>
+        </div>
+
+        <img id="modeToggleBtn" src="img/mode1.png" alt="Toggle dark mode" onclick="toggleMode()">
+    </div>
+
+    <button class="scroll-to-top" onclick="scrollToTop()">&#9650;</button>
+
+    <div class="artsee">
+        <div class="content1">
+            <h1>Art Blog</h1>
+            <a class="artl" href="../Artblog/artblog.html">See more</a>
+        </div>
+    </div>
+
+    <div class="gamesee">
+        <div class="content2">
+            <h1>Gaming Blog</h1>
+            <a class="gamel" href="../Gameblog/gameblog.html">See more</a>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p class="fp">2024 © Copyright. Artyfy All Rights Reserved.</p>
+        <div class="footer1">
+            <a href="https://www.facebook.com/angelou.arthy/"><img src="socialicon/fb.png" alt=""></a>
+            <a href="https://www.instagram.com/arthyme_03/""><img src="socialicon/in.png" alt=""></a>
+            <a href="https://www.tiktok.com/@arthyme3"><img src="socialicon/ti.png" alt=""></a>
+            <a href="https://www.youtube.com/channel/UCIPYkguatOK7SwCR4fO01lQ"><img src="socialicon/yt.png" alt=""></a>
+        </div>
+    </div>
+</body>
+</html>

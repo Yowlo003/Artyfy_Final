@@ -1,0 +1,149 @@
+@font-face { font-family: Gagalin; src: url('Gagalin-Regular.otf'); }
+@font-face { font-family: Gagalin; font-weight: bold; src: url('Gagalin-Regular.otf');}
+
+body {
+	font-family: sans-serif;
+	line-height: 1.5;
+	min-height: 100vh;
+	background: #ffeef8;
+	margin: 0;
+}
+
+.Logo{
+	display: relative;
+	bottom: 30px;
+}
+.head1{
+	position:relative;
+	cursor:default ;
+	left: 80px;
+	color: #856162;
+	font-family: 'Gagalin', sans-serif;                       
+    font-size: 48px;
+}
+
+.head2{
+	cursor:default ;
+	color: #856162;
+	font-family: 'Gagalin', sans-serif;                        
+    font-size: 40px;
+}
+.content{
+    min-height: 100vh;
+    display: flex;
+	align-items: center;
+	justify-content:space-evenly;
+}
+.main {
+	border-radius: 20px;
+	border: solid;
+	border-width:7px;
+	border-color: #e0cbd2;
+	padding: 10px 20px;
+	transition: transform 0.2s;
+    height: 500px;
+	width: 330px;
+	text-align: center;
+}
+
+.for{
+	cursor: pointer;
+	margin-top: -3%;
+	margin-right: 53%;
+	font-size: 12px;
+}
+
+.for a{
+	color: #856162;
+}
+
+.regt{
+	cursor:default ;
+	font-size: 16px;
+	color: #856162;
+	margin-bottom: 5px;
+}
+
+label {
+	display:absolute;
+	margin-right: 58%;
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	color: #856162;
+	font-weight: bold;
+}
+
+
+input {
+	background-color: #fdefb9;
+	color: black;
+	display:absolute;
+	align-items: center;
+	width: 90%;
+	margin-bottom: 15px;
+	padding: 15px;
+	box-sizing: border-box;
+	border: 1px solid #ffeef8;
+	border-radius: 20px;
+}
+
+.log {
+	padding: 10px 50px;
+	border-radius: 30px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	border:solid;
+	border-color: #ffeef8;
+	color: #856162;
+	text-decoration: none;
+	cursor: pointer;
+	background-color: #51d2e1;
+	text-decoration: none;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.log:hover{
+	color: #ffeef8;
+	background-color: #0d9ec0;
+}
+
+.regb {
+	padding: 8px 30px;
+	border-radius: 30px;
+	margin-bottom: 15px;
+	border:solid;
+	color: #ffeef8;
+	cursor: pointer;
+	background-color: #17ae52;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.regb:hover{
+	background-color: #138d42;
+}
+
+.wrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+    .Logo{
+		display: none;
+	}
+    .main {
+		border-radius: 20px;
+		border: solid;
+		border-width:7px;
+		border-color: #e0cbd2;
+		padding: 10px 20px;
+		transition: transform 0.2s;
+		height: 500px;
+		width: 330px;
+		text-align: center;
+	}
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Logo.png" type="image/x-icon">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="headerbox"></div>
+        <div class="headerbox1">
+            <img src="Logo.png" alt="">
+            <h1>ARTYFY</h1>
+        </div>
+        <div class="headerboxmenu" id="headertop">
+            <a href="../Homefiles/homepage.html" class="dec">Home</a>
+            <a href="../About/About.html" class="dec">About</a>
+            <div class="hovernav" onclick="nav()">
+                Blog &#9660;
+                <div class="popup" id="popup">
+                    <a href="../Artblog/artblog.html" class="art">Art Blog</a>
+                    <a href="../Gameblog/gameblog.html" class="game">Game Blog</a>
+                </div>
+            </div>
+            <a href="Contact.html" class="active">Contact</a>
+        </div>
+
+        <img id="modeToggleBtn" src="img/mode1.png" alt="Toggle dark mode" onclick="toggleMode()">
+    </div>
+
+    <button class="scroll-to-top" onclick="scrollToTop()">&#9650;</button>
+
+    <div class="content">
+        <div class="content1">
+            <h1 class="c1-1">GET IN TOUCH WITH ME</h1>
+            <p class="c1-2">Want to get in touch? I love to hear from you here's 
+                how you can reach me...
+            </p>
+
+            <div class="contentc">
+                <div class="contentca">
+                    <img src="img/p.png" alt="">
+                    <div class="content3">
+                        <h3 class="c2-1">Contact me using phone</h3>
+                        <p class="c2-2">Just pick up the phone to chat with me.
+                        </p>
+                        <p class="cons">+ 353 1 512 4400</p>
+                    </div>
+                </div>
+                <div class="contentca">
+                    <img src="img/m.png" alt="">
+                    <div class="content3">
+                        <h3 class="c2-1">Contact me using email</h3>
+                        <p class="c2-2">Have a chat with me using email.
+                        </p>
+                        <p class="cons">yahikomearthy@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p class="fp">2024 © Copyright. Artyfy All Rights Reserved.</p>
+        <div class="footer1">
+            <a href="https://www.facebook.com/angelou.arthy/"><img src="socialicon/fb.png" alt=""></a>
+            <a href="https://www.instagram.com/arthyme_03/"><img src="socialicon/in.png" alt=""></a>
+            <a href="https://www.tiktok.com/@arthyme3"><img src="socialicon/ti.png" alt=""></a>
+            <a href="https://www.youtube.com/channel/UCIPYkguatOK7SwCR4fO01lQ"><img src="socialicon/yt.png" alt=""></a>
+        </div>
+    </div>
+</body>
+</html>
